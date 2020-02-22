@@ -18,10 +18,12 @@ $(document).ready(function() {
     if($($("#videoplayer").children()[0]).attr("src")=="pics/play.png") {
       $($("#videoplayer").children()[0]).attr("src","pics/pause.jpg");
       $($("#videoplayer").children()[0]).attr("aria-label","pause button");
+      $($("#videoplayer").children()[0]).attr("alt","pause button");
       $("#thevideo")[0].play();
     } else {
       $($("#videoplayer").children()[0]).attr("src","pics/play.png");
       $($("#videoplayer").children()[0]).attr("aria-label","play button");
+        $($("#videoplayer").children()[0]).attr("alt","play button");
       $("#thevideo")[0].pause();
     }
   });
