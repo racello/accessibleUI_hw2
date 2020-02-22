@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Accessibility Course Overview</title>
@@ -18,11 +18,10 @@
 
   <h1>Accessibility Overview</h1>
 
-  <video width="480" height="360" id="thevideo">
-    <source src="employment-movie.mp4" type="video/mp4">
-  </video>
+  <video class="video-js" crossorigin="anonymous" width="480" height="360" id="thevideo"></video>
   <div id="videoplayer" tabindex="5">
-    <img width="50px" height="50px" src="pics/play.png" aria-label="play button" alt="play button">
+    <img id="play_pause" width="50px" height="50px" src="pics/play.png" aria-label="play button" alt="play button">
+    <button id="captions" type="button" data-state="captions">CC</button>
   </div>
 
   <h2>Links</h2>
