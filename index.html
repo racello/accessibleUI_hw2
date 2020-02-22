@@ -35,10 +35,18 @@
   <form id="sign-up-form">
 
   <p>
-    <span id="name">Name:</span>  <input name="fn" type="text" size="10" id="fn"> <input name="mi" type="text" size="1" id="mi">. <input name="ln" type="text" size="10" id="ln"><br>
+    <span id="name">Name:</span> <br />
+    <div id="name_input">
+      <label for="first name">First: </label>
+      <input name="fn" type="text" size="10" id="fn"> <br />
+      <label for="middle initial">Middle Initial: </label>
+      <input name="mi" type="text" size="1" id="mi">. <br />
+      <label for="last name">Last: </label>
+      <input name="ln" type="text" size="10" id="ln">
+    </div>
   </p>
   <p>
-    <span id="email">Email:</span> <input id="em" name="em" type="text" size="20">
+    <label for="email">Email:</label> <input id="em" name="em" type="text" size="20">
   </p>
   <p>
     <span id="spamtext">Would you like to receive occassional emails with offers from us?</span>
@@ -48,7 +56,7 @@
     <input type="hidden" name="spamyn" id="spamyn" value="n">
   </p>
   <p>
-    Comments:<br>
+    <label for="comments"> Comments: </label><br>
     <textarea rows="5" cols="40"></textarea>
   </p>
    <input type="button" value="Sign Up!" id="signupbutton">

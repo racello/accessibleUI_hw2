@@ -53,3 +53,7 @@ a {
   height: 207px;
   background-image: url(pics/accessibilityoverviewbanner.png);
 }
+
+#name_input {
+  margin-left: 40px;
+}
