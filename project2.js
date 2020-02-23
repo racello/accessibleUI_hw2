@@ -11,11 +11,6 @@ $(document).ready(function() {
     }
   });
 
-  //set up video with source and captions file
-  var video = $('#thevideo');
-  video.append("<source src='employment-movie.mp4' type='video/mp4'>");
-  video.append("<track label='English' kind='captions' srclang='en' src='captions.sbv' default></track>");
-
   // Play video
   $("#play_pause").mousedown(function() {
     if($($("#videoplayer").children()[0]).attr("src")=="pics/play.png") {
@@ -29,21 +24,6 @@ $(document).ready(function() {
         $($("#videoplayer").children()[0]).attr("alt","play button");
       $("#thevideo")[0].pause();
     }
-  });
-
-  //turn captions on/off
-  $("#captions").mousedown(function() {
-    var video = $('#thevideo');
-    // for (var i = 0; i < video.textTracks.length; i++) {
-    //    video.textTracks[i].mode = 'show';
-    // }
-    var tracks = video.children()[0].textTracks;
-    console.log(tracks);
-    for (var i = 0; i < tracks.length; i++) {
-      var track = tracks[i];
-      console.log(track.mode);
-    }
-    console.log("caption time")
   });
 
   // Form validation
