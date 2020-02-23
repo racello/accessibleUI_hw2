@@ -1,7 +1,6 @@
 $(document).ready(function() {
   // Toggle the receive spam checkbox
   $("#receivespambutton").click(function() {
-
     if($($("#receivespambutton").children()[0]).attr("src")=="pics/unchecked.png") {
       $($("#receivespambutton").children()[0]).attr("src","pics/checked.png");
       $("#spamyn").val("y");
@@ -9,6 +8,20 @@ $(document).ready(function() {
       $($("#receivespambutton").children()[0]).attr("src","pics/unchecked.png");
       $("#spamyn").val("n");
     }
+  });
+  //toggle spam checkbox with space button
+  $("#receivespambutton").focusin(function() {
+    $(document).on('keypress',function(e) {
+      if(e.which == 32) {
+        if($($("#receivespambutton").children()[0]).attr("src")=="pics/unchecked.png") {
+          $($("#receivespambutton").children()[0]).attr("src","pics/checked.png");
+          $("#spamyn").val("y");
+        } else {
+          $($("#receivespambutton").children()[0]).attr("src","pics/unchecked.png");
+          $("#spamyn").val("n");
+        }
+      }
+    });
   });
 
   // Play video
@@ -42,15 +55,4 @@ $(document).ready(function() {
     }
     alert("Thank you!  Please watch your email for our exciting newsletter and offers!");
   });
-  //form validation through keypress (ENTER)
-  jQuery.expr[':'].focus = function( elem ) {
-    return elem === document.activeElement && ( elem.type || elem.href );
-  };
-  if ($("#signupbutton").is(":focus")) {
-    $(document).on('keypress',function(e) {
-      if(e.which == 13) {
-          alert('You pressed enter!');
-      }
-    });
-  }
 });
