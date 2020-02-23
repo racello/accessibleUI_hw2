@@ -30,20 +30,27 @@ $(document).ready(function() {
   $("#signupbutton").click(function() {
     if($("#fn").val()=="" || $("#mi").val()=="" || $("#ln").val()=="") {
       $("#name").addClass("error");
-
       return;
     } else {
       $("#name").removeClass("error");
     }
-
     if($("#em").val()=="") {
       $("#email").addClass("error");
-
       return;
     } else {
       $("#name").removeClass("error");
     }
-
     alert("Thank you!  Please watch your email for our exciting newsletter and offers!");
   });
+  //form validation through keypress (ENTER)
+  jQuery.expr[':'].focus = function( elem ) {
+    return elem === document.activeElement && ( elem.type || elem.href );
+  };
+  if ($("#signupbutton").is(":focus")) {
+    $(document).on('keypress',function(e) {
+      if(e.which == 13) {
+          alert('You pressed enter!');
+      }
+    });
+  }
 });
