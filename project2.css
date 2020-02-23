@@ -36,7 +36,7 @@ a {
 }
 
 .navigation a {
-  outline: none;
+
 }
 
 #videoplayer {
@@ -47,12 +47,6 @@ a {
 
 .error {
   color: red;
-}
-
-#accessibilitybanner {
-  width: 857px;
-  height: 207px;
-  background-image: url(pics/accessibilityoverviewbanner.png);
 }
 
 #name_input {
